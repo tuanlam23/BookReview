@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181009132309) do
+ActiveRecord::Schema.define(version: 20181009150615) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 20181009132309) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "login_name"
+    t.string   "gender"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
