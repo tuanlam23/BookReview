@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration
       t.date :review_date
       t.integer :user_id
       t.integer :book_id
-      t.double :review_rate_star
+      t.float :review_rate_star
 
       t.timestamps null: false
     end
