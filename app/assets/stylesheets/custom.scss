@@ -1,0 +1,51 @@
+
+.logo-font {
+  font-weight: bold;
+  color: white;
+  font-size: x-large;
+  font-family: 'Mali', cursive;
+  &:hover {
+    color: #EEE;
+  }
+}
+.menu li a:hover{
+  color :#EEE;
+}
+.warning-text-signup {
+  color: white;
+}
+
+.signup-form {
+  margin-top: 10%;
+}
+
+.error-devise {
+  h5, ul {
+    color: #dab239 !important;
+  }
+}
+
+.form-post {
+  background-color: white;
+}
+
+.box {
+  background-color: white;
+}
+
+.file{
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  text-align: right;
+  opacity: 0;
+  background: none repeat scroll 0 0 transparent;
+  cursor: inherit;
+  display: block;
+}
+
+#price {
+  color: red;
+}
