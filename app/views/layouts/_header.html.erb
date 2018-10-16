@@ -1,0 +1,74 @@
+<div class="nav-container">
+  <nav class="top-bar overlay-bar">
+    <div class="container">
+      <div class="row utility-menu">
+        <div class="col-md-12">
+          <div class="utility-inner clearfix">
+            <span class="alt-font"><i class="fa fa-map-marker" aria-hidden="true"></i></i>
+              <%= link_to "LAM THON", "https://goo.gl/maps/yUWMfPh5Sno", class: "alt-font-style", target: "_blank" %>
+
+            </span>
+            <span class="alt-font"><i class="fa fa-envelope-open" aria-hidden="true"></i></i>
+              <%= link_to "lamthon@hedspi.com", "https://mail.google.com", class: "alt-font-style", target: "_blank" %>
+            </span>
+            <div class="pull-right">
+              <% if user_signed_in? %>
+                <%= link_to home_path, class: "btn login-button btn-post" do %>
+                  Post<span class="fa fa-plus-circle"></span>
+                <% end %>
+                <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-primary login-button btn-xs" %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary login-button btn-xs" %>
+              <% else %>
+                <%= link_to "Login", new_user_session_path, class: "btn btn-primary login-button btn-xs" %>
+                <%= link_to "Signup", new_user_registration_path, class: "btn btn-primary btn-filled btn-xs" %>
+              <% end %>
+              <a href="#" class="language"><%= image_tag "flag_vn.jpg" %></a>
+              <a href="#" class="language"> <%= image_tag "flag_japan.png" %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row nav-menu">
+        <div class="col-md-2 columns">
+         <h1><%= link_to "MOT SACH", root_path, class: "logo-font" %></h1>
+        </div>
+
+        <div class="col-md-10 columns">
+          <ul class="menu">
+            <li>
+              <%= link_to "Home", home_path %>
+            </li>
+            <li>
+              <%= link_to "Help", help_path %>
+            </li>
+          </ul>
+
+          <ul class="social-icons text-right">
+            <li>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div><!--end of row-->
+
+      <div class="mobile-toggle">
+        <i class="icon icon_menu"></i>
+      </div>
+
+    </div><!--end of container-->
+  </nav>
+</div>
